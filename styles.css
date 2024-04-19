@@ -1,0 +1,122 @@
+/* Reset some default styles */
+body, a, .hyperlink, .link-content, .text, .image{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	display: block;
+}
+
+table, tbody, tr, td{
+	padding: 100px;
+}
+
+h1, h2, p {
+	margin: 0;
+	padding: 10px;
+}
+
+/* Create a container to hold the columns */
+.container {
+	display: flex;
+	width: 100%;
+	height: 100vh;
+}
+
+/* Define the style for each column */
+.column {
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+#left-column {
+    background-color: #1A244D;
+    color: #FFCC57;
+    text-align: center;
+    flex: 0.5;
+    font-size: 12px;
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+#right-column {
+	flex: 2;
+	background-color: #FFCC57;
+	color: #1A244D;
+	text-align: center;
+	font-family: sans-serif;
+	padding: 20px;
+}
+
+/* Style the container with an underline shape */
+.underline-shape {
+	display: inline-block;
+	position: relative;
+	padding-bottom: 5x;
+}
+
+/* Style the underline itself */
+.underline-shape p::after {
+	content: "";
+	position: absolute;
+	transform: translateX(-50%);
+	width: 1500%; /* Adjust the width to control the length of the underline */
+	height: 3px; /* Adjust the thickness of the underline as needed */
+	background-color: #FFCC57; /* Adjust the color of the underline as needed */
+}
+
+/* Remove borders and spacing from the table */
+.borderless-table {
+    border-collapse: collapse;
+    width: 100%;
+    padding: 10px;
+}
+
+/* Style the table cells (optional) */
+.borderless-table td {
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* Style the hyperlink container */
+.hyperlink {
+    position: relative;
+    display: inline-block;
+    overflow: hidden; /* Prevents the image from overflowing the container */
+}
+
+/* Style the content container */
+.link-content {
+    position: relative;
+}
+
+/* Style the image */
+.image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px; /* Adjust the width of the image as needed */
+    height: 150px;
+    z-index: 2;
+    transform: translateY(0); /* Initial position */
+}
+
+/* Add the hover effect to the image */
+.image:hover {
+    transform: translateY(-150px); /* Move the image 10 pixels upward on hover */
+    transition: transform 0.8s; /* Apply a transition for smooth movement */
+}
+
+/* Add the hover effect to the image */
+.image:hover .image {
+    transform: translateY(-10px); /* Move the image 10 pixels upward on hover */
+}
+
+/* Style the text */
+.text {
+    position: relative;
+    z-index: 1;
+    background-color: #1A244D;
+    color: #FFCC57;
+    padding: 65px 18px;
+    }
